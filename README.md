@@ -1,17 +1,15 @@
 # money
 
-Package money represents a monetary value. This is a Go implementation of Fowler's Money pattern.
+Package money represents a monetary value. This is a Go implementation of [Fowler's Money pattern](https://martinfowler.com/eaaCatalog/money.html).
 
-+-----------------+
 |      Money      |
-+-----------------+
+|-----------------|
 | amount          |
 | currency        |
-+-----------------+
+|-----------------|
 | +, -, *         |
 | allocate        |
 | >, <. >=, <=, = |
-+-----------------+
 
 A large proportion of the computers in this world manipulate money, so it's always puzzled me that money isn't actually a first class data type in any mainstream programming language. The lack of a type causes problems, the most obvious surrounding currencies. If all your calculations are done in a single currency, this isn't a huge problem, but once you involve multiple currencies you want to avoid adding your dollars to your yen without taking the currency differences into account. The more subtle problem is with rounding. Monetary calculations are often rounded to the smallest currency unit. When you do this it's easy to lose pennies (or your local equivalent) because of rounding errors.
 
